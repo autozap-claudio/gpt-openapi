@@ -6,7 +6,7 @@
   },
   "servers": [
     {
-      "url": "https://gpt-api-proxy-opal.vercel.app/"
+      "url": "https://gpt-api-proxy.vercel.app"
     }
   ],
   "paths": {
