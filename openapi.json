@@ -1,0 +1,78 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "KnewCMS API",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://mcapi.knewcms.com:2087"
+    }
+  ],
+  "paths": {
+    "/lines/test": {
+      "post": {
+        "operationId": "criarTesteLinha",
+        "summary": "Criar linha de teste de 60 minutos para cliente",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "notes": {
+                    "type": "string",
+                    "example": "Cliente teste para avaliação"
+                  },
+                  "krator_package": {
+                    "type": "string",
+                    "example": "1"
+                  },
+                  "package_p2p": {
+                    "type": "string",
+                    "example": "647fc3ce3537090f240bc36b"
+                  },
+                  "package_iptv": {
+                    "type": "integer",
+                    "example": 30
+                  },
+                  "testDuration": {
+                    "type": "integer",
+                    "example": 60
+                  }
+                },
+                "required": [
+                  "notes",
+                  "krator_package",
+                  "package_p2p",
+                  "package_iptv",
+                  "testDuration"
+                ]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Linha de teste criada com sucesso"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "securitySchemes": {
+      "bearerAuth": {
+        "type": "http",
+        "scheme": "bearer",
+        "bearerFormat": "JWT"
+      }
+    }
+  },
+  "security": [
+    {
+      "bearerAuth": []
+    }
+  ]
+}
