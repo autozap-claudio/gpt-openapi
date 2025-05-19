@@ -6,7 +6,7 @@
   },
   "servers": [
     {
-      "url": "https://mcapi.knewcms.com:2087"
+      "url": "https://https://gpt-api-proxy-opal.vercel.app/"
     }
   ],
   "paths": {
